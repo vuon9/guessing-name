@@ -16,17 +16,18 @@ func main() {
 	secretNumber := rand.Intn(101)
 
 	for {
-		println("Please input your guess")
+		fmt.Printf("Please input your guess: ")
 
+		var err error
 		var guess int
 		scanner := bufio.NewScanner(os.Stdin)
+
 		if scanner.Scan() {
-			guessInt64, err := strconv.ParseInt(scanner.Text(), 10, 64)
+			guess, err = strconv.Atoi(scanner.Text())
 			if err != nil {
 				fmt.Printf("Your input is not a number!")
 				continue
 			}
-			guess = int(guessInt64)
 		}
 
 		if guess > secretNumber {
