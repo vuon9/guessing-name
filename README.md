@@ -1,4 +1,4 @@
-# Guessing name example
+# Guessing name
 
 Guessing-name is a name of a Rust topic, I've done it as a practice in Go.
 
